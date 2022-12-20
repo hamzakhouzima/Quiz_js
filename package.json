@@ -1,0 +1,24 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "quiz brief ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzakhouzima/Quiz_js.git"
+  },
+  "author": "hamza_khouzima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzakhouzima/Quiz_js/issues"
+  },
+  "homepage": "https://github.com/hamzakhouzima/Quiz_js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.0"
+  }
+}
