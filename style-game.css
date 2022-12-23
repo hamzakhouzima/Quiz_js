@@ -23,6 +23,10 @@
     font-size: 3rem;
     /*min-width:80rem;*/
     height: 60px;
+    overflow:hidden;
+    display:flex;
+    align-items: center;
+    padding: 0 20px;
     
     
 }
@@ -41,17 +45,26 @@
 }
 
 .choice-prefix{
-    position :absolute;
-    padding : 2rem 2.5rem ;
-    color : rgb(252, 252, 252);
+    /* position :absolute; */
+    /* padding : 2rem 2.5rem ; */
+    color : rgb(210, 1, 1);
+    z-index: 1000;
     font-family: 'Rubik Spray Paint', cursive;
-    top: -81px;   
+    /* top: -81px;    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
      
 
 }
 .choice-text{
     padding:2rem;
     width:100%;
+    background:#ff66b3;
+    padding-left: 20px;
+     display:flex;
+     width: 100%;
+     align-items:center;
 }
 .correct {
     background : linear-gradient(32deg ,rgba(11,223,36) 0%, rgb(41,232,111) 100%);
@@ -86,6 +99,8 @@
 /* .progressText{
      */
 /* } */
+
+
 @media screen and (max-width:768px){
     .choice-container{
         min-width : 40rem;

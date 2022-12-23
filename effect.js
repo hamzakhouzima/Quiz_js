@@ -67,13 +67,38 @@ function startGame(){
 
 function getQuestion(){
 
-  if(questionCounter <= MAX_QST ){
+  
+    if(availableQuestions.length === 0 || questionCounter >MAX_QST){
+      return window.location.assign('/end.html')
+    } 
+
+    questionCounter++
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QST}`
+    progressBarFull.style.width = `${(questionCounter/MAX_QST)*100}%`
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionIndex]
+    question.innerText = currentQuestion.question
+
+    choices.foreach(choice=>{
+      const number = choice.dataset['number']
+      choice.innerText = currentText ['choice' + number]
 
 
-  }
 
+    })
 
-
+    availableQuestions.splice(questionsIndex ,1)
+    acceptingAnswers = true
 
 
 }
+choices.forEach(choice=>{
+  choice.addEventListner('click' ,e=>{
+    if(!acceptingAnswers) return
+    acceptingAnswers = false
+    const selectedChoice = e.target
+    const selectedAnswer = selectedChoice.dataset('number')
+    
+  })
+
+})
