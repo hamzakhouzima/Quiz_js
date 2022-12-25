@@ -47,24 +47,28 @@ let questions = [
       answer : 1,
     },
   ]
-    
-function getQuestion(){
-    var counter
-    
-  choices.forEach(element => { 
-    console.log(element)
-    for(counter = 0 ; counter<4 ; counter++ ){
-     
-     
-        questionText.innerHTML=questions[counter].question
-        element.innerHTML=questions[1].choice2
-        console.log(counter)
+function getQuestion(x){
+
+    choices.forEach(element=>{
 
 
-}
+    questionText.innerHTML=questions[x].question
+
+
+    
+      questions.forEach((answer,index)=>{ 
+    if(x==index)   {
+    var number = element.dataset['number']
+    element.innerHTML = answer['choice' + number]  
+    }
+    });
 
 });
- }
+}
 
 
-getQuestion()
+
+
+
+
+getQuestion(1)
