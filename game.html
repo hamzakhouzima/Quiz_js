@@ -27,7 +27,7 @@
                 <h2 class="hud-prefix">
                     Score
                 </h2>
-                <h1 class="hud-main-text" id="score">
+                <h1 class="hud-main-text" id="score" value="0">
                     0
                 </h1>
             </div>
@@ -37,7 +37,7 @@
 <div class="choice-container" >
     <p class="choice-prefix" >A</p>
     <input type="checkbox" id="a" hidden>
-    <label   class="choice-text my-input"  data-number="1" > </label>
+    <label   class="choice-text my-input"  onclick="getAnswer(this)" data-number="1" > </label>
         <!-- #onclick="rrr()" -->
     
     <!-- <script>
@@ -59,20 +59,33 @@
     </script> -->
 
     </div>
-<div class="choice-container">
-    <p class="choice-prefix">B</p>
-    <p class="choice-text" data-number="2"></p>
+<div class="choice-container" >
+    <p class="choice-prefix" >B</p>
+
+    <input type="checkbox" id="a" hidden>
+    <label   class="choice-text my-input"  onclick="getAnswer(this)" data-number="2" > </label>
+    <!-- <span id="B">O</span> -->
+
 </div>
-<div class="choice-container">
-    <p class="choice-prefix">C</p>
-    <p class="choice-text" data-number="3"></p>
+<div class="choice-container"   >
+    <p class="choice-prefix" >C</p>
+
+    <input type="checkbox" id="a" hidden>
+    <label   class="choice-text my-input" data-number="3"  onclick="getAnswer(this) " > </label>
+    <!-- <span id="3">O</span> -->
+
 </div>
-<div class="choice-container">
-    <p class="choice-prefix">D</p>
-    <p class="choice-text" data-number="4"></p>
+<div class="choice-container"  >
+    <p class="choice-prefix" >D</p>
+
+    <input type="checkbox" id="a" hidden>
+    <label class="choice-text my-input" onclick="getAnswer(this)" data-number="4" > </label>
+    <!-- <span id="4">O</span> -->
 </div>
 
     </div>
+
+    <button type="submit" id="next">Next</button>
    </div> 
 
    <script src="main.js"></script>

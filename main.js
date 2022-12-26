@@ -1,17 +1,16 @@
+
+const nextqst = document.querySelector("#next")
+
 let questionText = document.querySelector('.question')
-
 const progressText = document.querySelector('#progressText')
-const scoreText = document.querySelector('#score')
+var scoreText = document.querySelector('#score')
 const progressBarFull = document.querySelector('#progressBarFull')
-
-
 var choices =Array.from(document.querySelectorAll('.choice-text'))
+var answers = Array.from(document.querySelectorAll(".choice-container"))
 
-//for(){
- 
 
-//}
-// const currentQuestion = {}
+var x;
+var counter;
 let questions = [
     {
     
@@ -47,23 +46,60 @@ let questions = [
       answer : 1,
     },
   ]
+
+
+  var q;
+
+
 function getQuestion(x){
 
     choices.forEach(element=>{
-
-
-    questionText.innerHTML=questions[x].question
-
-
-    
-      questions.forEach((answer,index)=>{ 
-    if(x==index)   {
-    var number = element.dataset['number']
-    element.innerHTML = answer['choice' + number]  
-    }
+        questionText.innerHTML=questions[x].question
+        questions.forEach((answer,index)=>{ 
+        if(x==index){
+            var number = element.dataset['number']
+            element.innerHTML = answer['choice' + number] 
+        }
     });
 
 });
+
+}
+
+
+
+
+
+function getAnswer(item){   
+    var UserAnswer=item.getAttribute('data-number')
+    
+   
+    
+    increment()
+    let RightAnswer = questions[q].answer
+    
+    // console.log(questions[0].answer)
+    var i=0
+    if(UserAnswer==RightAnswer){
+        alert("riiiiiight biiitch")
+        i=i+10
+        document.querySelector('#score').innerHTML = i
+        // console.log(i)
+        return true;
+    }else{
+        alert("not right ")
+        return false;
+    }
+    
+
+}
+function increment(){
+    
+    getQuestion(q)
+    q=q+1
+    console.log(q)
+    // return q
+
 }
 
 
@@ -71,4 +107,12 @@ function getQuestion(x){
 
 
 
-getQuestion(1)
+
+
+
+
+
+
+//quiz logic , onclick check the dataset of the clicked answer and compare it with the answer from the array above 
+
+
