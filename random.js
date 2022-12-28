@@ -11,9 +11,9 @@ for (var i = 0; i <= n ; i++) {
     //  console.log(i)
  }
 
-
+var s=n
 //  console.log(q)
-while(aliasSerie.length<=n){
+while(aliasSerie.length<=s){
     q=mainSerie[Math.floor(Math.random() *  n)];
     n--
     aliasSerie.push(q)
